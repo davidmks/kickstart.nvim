@@ -15,7 +15,6 @@ return {
 
     local select = require('nvim-treesitter-textobjects.select')
     local move = require('nvim-treesitter-textobjects.move')
-    local swap = require('nvim-treesitter-textobjects.swap')
 
     -- Select keymaps
     vim.keymap.set({ 'x', 'o' }, 'af', function() select.select_textobject('@function.outer', 'textobjects') end, { desc = 'Select outer function' })
@@ -34,9 +33,5 @@ return {
     vim.keymap.set({ 'n', 'x', 'o' }, '][', function() move.goto_next_end('@class.outer', 'textobjects') end, { desc = 'Next class end' })
     vim.keymap.set({ 'n', 'x', 'o' }, '[[', function() move.goto_previous_start('@class.outer', 'textobjects') end, { desc = 'Previous class start' })
     vim.keymap.set({ 'n', 'x', 'o' }, '[]', function() move.goto_previous_end('@class.outer', 'textobjects') end, { desc = 'Previous class end' })
-
-    -- Swap keymaps
-    vim.keymap.set('n', '<leader>a', function() swap.swap_next('@parameter.inner') end, { desc = 'Swap with next parameter' })
-    vim.keymap.set('n', '<leader>A', function() swap.swap_previous('@parameter.inner') end, { desc = 'Swap with previous parameter' })
   end,
 }
