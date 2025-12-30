@@ -7,6 +7,18 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        python = { 'ruff' },
+        typescript = { 'biomejs' },
+        typescriptreact = { 'biomejs' },
+        javascript = { 'biomejs' },
+        javascriptreact = { 'biomejs' },
+        go = { 'golangcilint' },
+        json = { 'biomejs' },
+        jsonc = { 'biomejs' },
+        sh = { 'shellcheck' },
+        bash = { 'shellcheck' },
+        yaml = { 'yamllint' },
+        dockerfile = { 'hadolint' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
