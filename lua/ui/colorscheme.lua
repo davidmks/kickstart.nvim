@@ -10,6 +10,9 @@ return {
     priority = 1000,
     config = function()
       require('rose-pine').setup {
+        styles = {
+          italic = false,
+        },
         highlight_groups = {
           ['@string.documentation'] = { link = 'Comment' },
           ['@string.documentation.python'] = { link = 'Comment' },
@@ -30,4 +33,5 @@ return {
       vim.cmd.colorscheme 'tokyonight'
     end,
   },
+
 }
