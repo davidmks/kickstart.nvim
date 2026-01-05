@@ -7,7 +7,7 @@ vim.g.have_nerd_font = false
 
 -- Line numbers
 vim.o.number = true
--- vim.o.relativenumber = true
+vim.o.relativenumber = true
 
 -- Mouse mode
 vim.o.mouse = 'a'
