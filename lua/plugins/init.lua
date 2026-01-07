@@ -1,28 +1,10 @@
 -- Small utility plugins
 return {
-  -- Makefile runner
+  -- Auto-close brackets, quotes, etc.
   {
-    'Zeioth/makeit.nvim',
-    cmd = { 'MakeitOpen', 'MakeitToggleResults', 'MakeitRedo' },
-    dependencies = { 'stevearc/overseer.nvim' },
-    keys = {
-      { '<leader>mo', '<cmd>MakeitOpen<cr>', desc = '[M]ake [O]pen' },
-      { '<leader>mr', '<cmd>MakeitRedo<cr>', desc = '[M]ake [R]edo' },
-      { '<leader>mt', '<cmd>MakeitToggleResults<cr>', desc = '[M]ake [T]oggle results' },
-    },
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
     opts = {},
-  },
-  {
-    'stevearc/overseer.nvim',
-    cmd = { 'MakeitOpen', 'MakeitToggleResults', 'MakeitRedo' },
-    opts = {
-      task_list = {
-        direction = 'bottom',
-        min_height = 25,
-        max_height = 25,
-        default_detail = 1,
-      },
-    },
   },
 
   -- Detect tabstop and shiftwidth automatically
