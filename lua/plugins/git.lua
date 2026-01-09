@@ -13,7 +13,7 @@ return {
       { '<leader>gs', '<cmd>DiffviewOpen --staged<cr>', desc = '[G]it diff [S]taged' },
     },
     opts = {
-      use_icons = false,
+      use_icons = true,
     },
   },
 
