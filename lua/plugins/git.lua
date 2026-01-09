@@ -10,7 +10,7 @@ return {
       { '<leader>gH', '<cmd>DiffviewFileHistory<cr>', desc = '[G]it repo [H]istory' },
       { '<leader>gq', '<cmd>DiffviewClose<cr>', desc = '[G]it diff [Q]uit' },
       { '<leader>gm', '<cmd>DiffviewOpen origin/main...HEAD<cr>', desc = '[G]it diff vs [M]ain' },
-      { '<leader>gs', '<cmd>DiffviewOpen --staged<cr>', desc = '[G]it diff [S]taged' },
+      { '<leader>gS', '<cmd>DiffviewOpen --staged<cr>', desc = '[G]it diff [S]taged' },
     },
     opts = {
       use_icons = true,
@@ -21,7 +21,7 @@ return {
   {
     'akinsho/git-conflict.nvim',
     version = '*',
-    config = true,
+    opts = {},
   },
 
   {
