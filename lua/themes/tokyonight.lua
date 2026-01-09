@@ -1,0 +1,12 @@
+-- Tokyo Night colorscheme
+return {
+  'folke/tokyonight.nvim',
+  enabled = vim.g.colorscheme == 'tokyonight',
+  priority = 1000,
+  config = function()
+    require('tokyonight').setup {
+      styles = { comments = { italic = false } },
+    }
+    vim.cmd.colorscheme 'tokyonight'
+  end,
+}
